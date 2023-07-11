@@ -7,6 +7,8 @@ const { logger, uncaughts } = require('./startup/logging')
 require('./startup/db')()
 uncaughts()
 require('./startup/routes')(app)
+require('./startup/prod')(app)
+
 
 
 if (!process.env.vidly_jwtPrivateKey) {
